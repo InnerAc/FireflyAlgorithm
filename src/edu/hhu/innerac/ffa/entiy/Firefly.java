@@ -14,14 +14,26 @@ public class Firefly {
 	private double maxAttraction;
 	private Point vector = null;
 	
+	/**
+	 * Define the dimension of the space of the firefly <br>
+	 * @param dim	the dimension
+	 */
 	public Firefly(int dim){
 		this.dimension = dim;
 	}
+	/**
+	 * Define the dimension of the space of the firefly and the coordinates in space<br>
+	 * @param dim	the dimension
+	 * @param i_point	the coordinates of firefly
+	 */
 	public Firefly(int dim,Point i_point){
 		this.dimension = dim;
 		this.point = i_point.clone();
 	}
 	
+	/**
+	 * Firefly move to the target direction.
+	 */
 	public void move(){
 		if(maxAttraction > 0){
 			this.point.add(vector);
@@ -29,6 +41,11 @@ public class Firefly {
 		}
 	}
 	
+	/**
+	 * Gets a copy of the current position of the firefly <br>
+	 * You can change your position at any position without having to worry about the original value.
+	 * @return the position of firefly
+	 */
 	public Point getPoint() {
 		return point.clone();
 	}
