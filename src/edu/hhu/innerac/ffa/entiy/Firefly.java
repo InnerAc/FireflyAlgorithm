@@ -2,6 +2,10 @@ package edu.hhu.innerac.ffa.entiy;
 
 import edu.hhu.innerac.ffa.template.Point;
 
+/**
+ * @author innerac
+ * The entiy of firefly
+ */
 public class Firefly {
 
 	private Point point = null;

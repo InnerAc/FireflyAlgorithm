@@ -14,7 +14,11 @@ public class FFA extends FireflyAlo {
 	
 	public static void main(String args[]){
 		FFA ffa = new FFA(10, 1);
-		ffa.start(100, 0, 10);
+		double[] st = new double[1];
+		double[] en = new double[1];
+		st[0] = 0;
+		en[0] = 10;
+		ffa.start(100, st, en);
 	}
 
 }

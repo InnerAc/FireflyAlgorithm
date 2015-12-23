@@ -15,6 +15,19 @@ public class Point {
 		this.dimension = dim;
 	}
 	
+	public Point(int dim,double[] rst,double[] ren){
+		this.dimension = dim;
+		dims = new double[dimension];
+		for(int i=0;i< dim;i++){
+			dims[i] = rst[i] + (ren[i] - rst[i])*Math.random();
+		}
+	}
+	
+	/**
+	 * @param dim
+	 * @param rst
+	 * @param ren
+	 */
 	public Point(int dim,double rst,double ren){
 		this.dimension = dim;
 		dims = new double[dimension];
