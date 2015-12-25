@@ -6,7 +6,7 @@ import edu.hhu.innerac.ffa.template.Point;
  * @author innerac
  * The entiy of firefly
  */
-public class Firefly {
+public class Firefly implements Comparable{
 
 	private Point point = null;
 	private int dimension;
@@ -79,5 +79,17 @@ public class Firefly {
 	}
 	public void setVector(Point vector) {
 		this.vector = vector.clone();
+	}
+	@Override
+	public int compareTo(Object o) {
+		if(o == null){
+			return 0;
+		}
+		double tmp = this.Light - ((Firefly)(o)).getLight();
+		if(tmp < 0)
+			return 1;
+		if(tmp > 0)
+			return -1;
+		return 0;
 	}
 }

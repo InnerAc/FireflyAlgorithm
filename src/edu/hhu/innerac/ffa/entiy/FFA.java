@@ -8,7 +8,7 @@ public class FFA extends FireflyAlo {
 
 	@Override
 	public double f(double[] args) {
-		double y = -(args[0] + 1/args[0]);
+		double y = -(args[0] + 1/args[0]) + 10;
 		return y;
 	}
 	
@@ -18,7 +18,7 @@ public class FFA extends FireflyAlo {
 		double[] en = new double[1];
 		st[0] = 0;
 		en[0] = 10;
-		ffa.start(100, st, en);
+		ffa.start(10, st, en);
 	}
 
 }

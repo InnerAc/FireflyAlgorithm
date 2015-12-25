@@ -1,6 +1,8 @@
 package edu.hhu.innerac.ffa.entiy;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import edu.hhu.innerac.ffa.template.Point;
@@ -130,7 +132,9 @@ public abstract class FireflyAlo {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public void printFirflies() {
+		Collections.sort(fireflies);
 		for (Firefly firefly : fireflies) {
 			System.out.println(firefly);
 		}
