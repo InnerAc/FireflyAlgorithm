@@ -80,6 +80,16 @@ public class Firefly implements Comparable{
 	public void setVector(Point vector) {
 		this.vector = vector.clone();
 	}
+	
+	public Firefly clone(){
+		Firefly firefly = new Firefly(dimension, point);
+		firefly.setLight(Light);
+		if(vector != null){
+			firefly.setMaxAttraction(maxAttraction);
+			firefly.setVector(vector);
+		}
+		return firefly;
+	}
 	@Override
 	public int compareTo(Object o) {
 		if(o == null){

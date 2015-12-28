@@ -14,14 +14,14 @@ import edu.hhu.innerac.ffa.template.PointUtil;
  */
 public abstract class FireflyAlo {
 
-	private List<Firefly> fireflies;	//Firefly population
-	private int popNum;					//the number of firefly population
-	private int dim;					//the space dimension
-	private int maxT;					//Maximum iteration number
+	protected List<Firefly> fireflies;	//Firefly population
+	protected int popNum;					//the number of firefly population
+	protected int dim;					//the space dimension
+	protected int maxT;					//Maximum iteration number
 
-	private double beta, alpha, gamma;	//Necessary value
+	protected double beta, alpha, gamma;	//Necessary value
 
-	private boolean isDisturbance = false;
+	protected boolean isDisturbance = false;
 	
 	/**
 	 * constructed function <br>
@@ -155,6 +155,10 @@ public abstract class FireflyAlo {
 		}
 	}
 	
+	public void myFuntion(){
+		
+	}
+	
 	@SuppressWarnings("unchecked")
 	public void printFirflies() {
 		Collections.sort(fireflies);
@@ -177,6 +181,7 @@ public abstract class FireflyAlo {
 		printFirflies();
 		while (i_maxT-- > 0) {
 			calcuAttraction();
+			myFuntion();
 			randomDisturbance();
 			move();
 			calcuLight();
