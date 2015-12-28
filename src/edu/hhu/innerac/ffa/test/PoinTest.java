@@ -55,4 +55,11 @@ public class PoinTest {
 		point = PointUtil.mul(point, 2);
 		System.out.println(point);
 	}
+	
+	@Test
+	public void randomTest(){
+
+		Point vector = new Point(2, 0, 0.02);
+		System.out.println(vector);
+	}
 }

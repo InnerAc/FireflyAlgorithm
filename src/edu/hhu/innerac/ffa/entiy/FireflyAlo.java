@@ -1,7 +1,6 @@
 package edu.hhu.innerac.ffa.entiy;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -22,6 +21,8 @@ public abstract class FireflyAlo {
 
 	private double beta, alpha, gamma;	//Necessary value
 
+	private boolean isDisturbance = false;
+	
 	/**
 	 * constructed function <br>
 	 * default alpha = 0.02, beta is 1.0, game = 1.0
@@ -131,7 +132,29 @@ public abstract class FireflyAlo {
 			firefly.move();
 		}
 	}
+	
+	/**
+	 * set random disturbance
+	 */
+	public void setRandomDisturbance(){
+		this.isDisturbance = true;
+	}
+	
+	public void unsetRandomDisturbance(){
+		this.isDisturbance = false;
+	}
 
+	@SuppressWarnings("unchecked")
+	public void randomDisturbance(){
+		if(this.isDisturbance){
+			Collections.sort(fireflies);
+			Firefly firefly = fireflies.get(0);
+			firefly.setMaxAttraction(1.0);
+			Point vector = new Point(dim, 0, alpha);
+			firefly.setVector(vector);
+		}
+	}
+	
 	@SuppressWarnings("unchecked")
 	public void printFirflies() {
 		Collections.sort(fireflies);
@@ -154,6 +177,7 @@ public abstract class FireflyAlo {
 		printFirflies();
 		while (i_maxT-- > 0) {
 			calcuAttraction();
+			randomDisturbance();
 			move();
 			calcuLight();
 		}
