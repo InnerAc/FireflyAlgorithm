@@ -1,4 +1,6 @@
-package edu.hhu.innerac.ffa.entiy;
+package edu.hhu.innerac.ffa.test;
+
+import edu.hhu.innerac.ffa.entiy.FireflyAlo;
 
 public class FFA extends FireflyAlo {
 
@@ -27,7 +29,6 @@ public class FFA extends FireflyAlo {
 		double[] en = new double[2];
 		st[0] = st[1] = -100;
 		en[0] = en[1] = 100;
-		ffa.setRandomDisturbance();
 		ffa.start(1, st, en);
 	}
 

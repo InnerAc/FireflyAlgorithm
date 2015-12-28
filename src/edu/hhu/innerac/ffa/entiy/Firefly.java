@@ -75,6 +75,8 @@ public class Firefly implements Comparable{
 		this.maxAttraction = maxAttraction;
 	}
 	public Point getVector() {
+		if (vector == null)
+			return null;
 		return vector.clone();
 	}
 	public void setVector(Point vector) {

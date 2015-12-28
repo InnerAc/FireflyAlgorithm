@@ -1,7 +1,9 @@
-package edu.hhu.innerac.ffa.entiy;
+package edu.hhu.innerac.ffa.entiy.extension;
 
 import java.util.Collections;
 
+import edu.hhu.innerac.ffa.entiy.Firefly;
+import edu.hhu.innerac.ffa.entiy.FireflyAlo;
 import edu.hhu.innerac.ffa.template.Point;
 
 public abstract class FireflyAloSelection extends FireflyAlo {

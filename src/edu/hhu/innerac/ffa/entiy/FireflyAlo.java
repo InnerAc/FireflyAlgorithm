@@ -21,7 +21,6 @@ public abstract class FireflyAlo {
 
 	protected double beta, alpha, gamma;	//Necessary value
 
-	protected boolean isDisturbance = false;
 	
 	/**
 	 * constructed function <br>
@@ -133,28 +132,6 @@ public abstract class FireflyAlo {
 		}
 	}
 	
-	/**
-	 * set random disturbance
-	 */
-	public void setRandomDisturbance(){
-		this.isDisturbance = true;
-	}
-	
-	public void unsetRandomDisturbance(){
-		this.isDisturbance = false;
-	}
-
-	@SuppressWarnings("unchecked")
-	public void randomDisturbance(){
-		if(this.isDisturbance){
-			Collections.sort(fireflies);
-			Firefly firefly = fireflies.get(0);
-			firefly.setMaxAttraction(1.0);
-			Point vector = new Point(dim, 0, alpha);
-			firefly.setVector(vector);
-		}
-	}
-	
 	public void myFuntion(){
 		
 	}
@@ -182,7 +159,6 @@ public abstract class FireflyAlo {
 		while (i_maxT-- > 0) {
 			calcuAttraction();
 			myFuntion();
-			randomDisturbance();
 			move();
 			calcuLight();
 		}
