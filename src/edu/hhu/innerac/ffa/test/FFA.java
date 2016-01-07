@@ -29,7 +29,7 @@ public class FFA extends FireflyAlo {
 		double[] en = new double[2];
 		st[0] = st[1] = -100;
 		en[0] = en[1] = 100;
-		ffa.start(1, st, en);
+		ffa.start(100, st, en);
 	}
 
 }

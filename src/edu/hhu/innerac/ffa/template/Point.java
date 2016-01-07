@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * @author innerac
  * The Point class <br>
+ * 坐标类，用来方便坐标的表示<br>
  * This class is in order to facilitate the representation and computation of coordinates in multidimensional space.<br>
  * Now ,it has add and subtract,and generate random coordinates.
  */

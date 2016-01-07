@@ -21,6 +21,6 @@ public class FFAD extends FireflyAloDisturbance {
 		st[0] = 0;
 		en[0] = 10;
 		ffa.setRandomDisturbance();
-		ffa.start(10, st, en);
+		ffa.start(100, st, en);
 	}
 }

@@ -6,6 +6,10 @@ import edu.hhu.innerac.ffa.entiy.Firefly;
 import edu.hhu.innerac.ffa.entiy.FireflyAlo;
 import edu.hhu.innerac.ffa.template.Point;
 
+/**
+ * @author innerac
+ * 在萤火虫种群中加入淘汰机制，每次移动删除掉亮度最弱的萤火虫，同时最优的萤火虫克隆一份进行随机扰动。
+ */
 public abstract class FireflyAloSelection extends FireflyAlo {
 
 	public FireflyAloSelection(int i_popNum, int i_dim) {

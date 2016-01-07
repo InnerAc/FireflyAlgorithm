@@ -20,7 +20,7 @@ public class FFAS extends FireflyAloSelection {
 		double[] en = new double[1];
 		st[0] = 0;
 		en[0] = 10;
-		ffa.start(1, st, en);
+		ffa.start(100, st, en);
 	}
 
 }
